@@ -24,10 +24,10 @@ const P = ({ children }: ChildrenProps) => (
 );
 
 export default () => (
-  <main className="p-4 md:p-24 bg-gray-100 min-h-screen border-t-4 border-blue-700">
-    <div className="grid grid-flow-row items-center md:grid-flow-col md:items-start auto-cols-max gap-16">
-      <img src={avatar} alt="Avatar" height="148px" width="148px" />
-      <div className="space-y-6 w-full max-w-xl">
+  <main className="p-8 md:p-24 bg-gray-100 min-h-screen border-t-4 border-blue-700">
+    <div className="flex flex-col gap-8 md:flex-row md:gap-16 md:items-start">
+      <img src={avatar} alt="Avatar" height="132px" width="132px" />
+      <div className="space-y-6 max-w-xl">
         <Title>Hugo Cárdenas</Title>
         <P>
           👋 Hi! <br />I am a software developer from Spain, based in Helsinki,
@@ -41,8 +41,8 @@ export default () => (
           >
             newthings.co
           </a>
-          , helping clients in the health sector and food delivery, building
-          some Cool Stuff™.
+          , I've been lately helping clients in the health sector and food
+          delivery, building some Cool Stuff™.
         </P>
         <P>
           I get excited about building beautiful products where I feel aligned
