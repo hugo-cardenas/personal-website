@@ -20,12 +20,12 @@ const Title = ({ children }: ChildrenProps) => (
 );
 
 const P = ({ children }: ChildrenProps) => (
-  <p className="text-lg text-gray-600 font-light">{children}</p>
+  <p className="text-lg text-gray-700 font-light">{children}</p>
 );
 
 export default () => (
-  <main className="p-8 md:p-24 bg-gray-100 min-h-screen border-t-4 border-blue-700">
-    <div className="flex flex-col gap-8 md:flex-row md:gap-16 md:items-start">
+  <main className="px-6 pt-8 pb-16 md:py-16 md:px-24 bg-gray-100 min-h-screen md:h-screen box-border border-t-4 border-blue-700">
+    <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       <img src={avatar} alt="Avatar" height="132px" width="132px" />
       <div className="space-y-6 max-w-xl">
         <Title>Hugo Cárdenas</Title>
@@ -52,7 +52,7 @@ export default () => (
           I have experience working across the whole web stack, but these days I
           gravitate towards the frontend side and design.
         </P>
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-row items-center space-x-6">
           <a
             href="https://twitter.com/_hugocardenas"
             target="_blank"
