@@ -36,7 +36,7 @@ export default () => (
         <P>
           Currently working as a consultant in{" "}
           <a
-            className="font-medium text-gray-500 hover:text-gray-600"
+            className="font-medium text-gray-600 hover:text-gray-800"
             href="https://newthings.co"
           >
             newthings.co
