@@ -34,5 +34,8 @@
     "react-icons": "^4.2.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0"
   }
 }
