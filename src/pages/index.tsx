@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import avatar from "../images/avatar.png";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
-import { SEO } from "../components/Seo";
+import { SEO } from "../components/SEO";
 
 type ChildrenProps = {
   children: React.ReactNode;
@@ -26,7 +26,7 @@ const P = ({ children }: ChildrenProps) => (
 
 export default () => (
   <main className="px-6 pt-8 pb-16 md:p-16 bg-gray-100 min-h-screen md:h-screen box-border border-t-4 border-blue-700">
-    {/* <SEO /> */}
+    <SEO />
     <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       <img src={avatar} alt="Avatar" height="132px" width="132px" />
       <div className="space-y-6 max-w-xl">

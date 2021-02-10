@@ -7,13 +7,19 @@ export const SEO = () => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
-  const { title, description, url, image, twitterUsername } = site.siteMetadata;
+  const {
+    title,
+    description,
+    siteUrl,
+    image,
+    twitterUsername,
+  } = site.siteMetadata;
 
   const seo = {
     title: title,
     description: description,
-    image: `${url}${image}`,
-    url: `${url}${pathname}`,
+    image: `${siteUrl}${image}`,
+    url: `${siteUrl}${pathname}`,
   };
 
   return (
@@ -41,7 +47,7 @@ const query = graphql`
       siteMetadata {
         title
         description
-        url
+        siteUrl
         image
         twitterUsername
       }

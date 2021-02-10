@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Hugo Cárdenas | Software developer",
     description: "Software developer",
-    url: "https://hugocardenas.me",
+    siteUrl: "https://hugocardenas.me",
     image: "/images/avatar.png",
     twitterUsername: "@_hugocardenas",
   },
