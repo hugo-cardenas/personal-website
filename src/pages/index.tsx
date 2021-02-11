@@ -17,21 +17,21 @@ const LinkedInIcon = styled(FaLinkedin)`
 `;
 
 const Title = ({ children }: ChildrenProps) => (
-  <h1 className="text-4xl text-gray-800 font-light">{children}</h1>
+  <h1 className="text-4xl font-light text-gray-800">{children}</h1>
 );
 
 const P = ({ children }: ChildrenProps) => (
-  <p className="leading-normal md:leading-normal text-2xl md:text-xl text-gray-500 font-light">
+  <p className="text-2xl font-light leading-normal text-gray-500 md:leading-normal md:text-xl">
     {children}
   </p>
 );
 
 export default () => (
-  <main className="px-6 pt-8 pb-16 md:py-20 md:px-32 bg-gray-50 min-h-screen md:min-h-screen box-border border-t-8 border-blue-600">
+  <main className="box-border min-h-screen px-6 pt-8 pb-16 border-t-8 border-blue-600 md:py-20 md:px-32 bg-gray-50 md:min-h-screen">
     <SEO />
     <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       <img src={avatar} alt="Avatar" height="132px" width="132px" />
-      <div className="space-y-6 max-w-xl">
+      <div className="max-w-xl space-y-6">
         <Title>Hugo Cárdenas</Title>
         <P>I am a software developer from Spain, based in Helsinki, Finland.</P>
         <P>
