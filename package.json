@@ -36,6 +36,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.0"
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "^5.1.7"
   }
 }
