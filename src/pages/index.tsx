@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { SEO } from "../components/SEO";
@@ -18,31 +18,46 @@ const LinkedInIcon = styled(FaLinkedin)`
   font-size: 24px;
 `;
 
-const TextBlock = ({ children }: ChildrenProps) => (
-  <div tw="space-y-6">{children}</div>
-);
+const Root = tw.main`
+  box-border 
+  flex 
+  flex-col 
+  items-center 
+  min-h-screen 
+  px-6 
+  pt-8 
+  pb-16 
+  bg-white 
+  border-t-8 
+  border-b-8 
+  border-blue-600 
+  md:py-16 
+  md:px-16
+`;
 
-const H1 = ({ children }: ChildrenProps) => (
-  <h1 tw="text-4xl font-semibold text-gray-800">{children}</h1>
-);
+const TextBlock = tw.div`space-y-6`;
 
-const H2 = ({ children }: ChildrenProps) => (
-  <h2 tw="text-3xl font-medium text-gray-800">{children}</h2>
-);
+const H1 = tw.h1`text-4xl font-semibold text-gray-800`;
 
-const H3 = ({ children }: ChildrenProps) => (
-  <h3 tw="text-xl font-medium text-gray-800">{children}</h3>
-);
+const H2 = tw.h2`text-3xl font-medium text-gray-800`;
 
-const P = ({ children }: ChildrenProps) => (
-  <p tw="text-base font-normal leading-relaxed text-gray-600">{children}</p>
-);
+const H3 = tw.h3`text-xl font-medium text-gray-800`;
 
-const Li = ({ children }: ChildrenProps) => (
-  <li tw="flex flex-row items-center space-x-2 text-base font-normal leading-relaxed text-gray-600">
-    {children}
-  </li>
-);
+const P = tw.p`text-base font-normal leading-relaxed text-gray-600`;
+
+const Li = tw.li`flex flex-row items-center space-x-2 text-base font-normal leading-relaxed text-gray-600`;
+
+const ProjectLink = styled.a.attrs({
+  children: "See site →",
+  target: "_blank",
+  rel: "noopener noreferrer",
+})`
+  ${tw`block text-blue-600 hover:text-blue-700`}
+`;
+
+const ProjectTitleBlock = tw.div`space-y-1`;
+
+const ProjectSubtitle = tw.div`text-sm text-gray-400`;
 
 const technologies = [
   "Typescript",
@@ -53,7 +68,7 @@ const technologies = [
 ];
 
 const IndexPage = () => (
-  <main tw="box-border flex flex-col items-center min-h-screen px-6 pt-8 pb-16 bg-white border-t-8 border-b-8 border-blue-600 md:py-16 md:px-16">
+  <Root>
     <SEO />
     <div tw="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       {/* Avatar */}
@@ -62,7 +77,7 @@ const IndexPage = () => (
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
-            placeholder="blurred"
+            // placeholder="blurred"
             objectFit="cover"
           />
         </div>
@@ -76,7 +91,7 @@ const IndexPage = () => (
             I am a software developer from Spain, based in Helsinki, Finland. I
             work as a consultant in{" "}
             <a
-              tw="font-medium text-blue-600 underline hover:text-blue-700"
+              tw="font-medium text-blue-600 hover:text-blue-700"
               href="https://newthings.co"
             >
               newthings.co
@@ -101,7 +116,7 @@ const IndexPage = () => (
             {technologies.map((text) => (
               <Li key={text}>
                 <HiArrowRight tw="text-gray-400" />
-                <span tw="leading-none ">{text}</span>
+                <span tw="leading-none">{text}</span>
               </Li>
             ))}
           </ul>
@@ -111,13 +126,19 @@ const IndexPage = () => (
           <H2>Some side projects</H2>
           <div tw="space-y-16">
             <div tw="space-y-6">
-              <H3>Historian</H3>
+              <ProjectTitleBlock>
+                <H3>Historian</H3>
+                <ProjectSubtitle>
+                  React · GatsbyJS · Tailwind CSS
+                </ProjectSubtitle>
+              </ProjectTitleBlock>
               <P>
                 Historian is a game about placing history events in the correct
                 chronological order. I started developing this for fun after
                 playing games with similar mechanics and lacking an online
                 version of it.
               </P>
+              <ProjectLink href="https://historianthegame.com" />
               <a
                 href="https://historianthegame.com"
                 target="_blank"
@@ -135,13 +156,19 @@ const IndexPage = () => (
               </a>
             </div>
             <div tw="space-y-6">
-              <H3>Ana García Lucero</H3>
+              <ProjectTitleBlock>
+                <H3>Ana García Lucero</H3>
+                <ProjectSubtitle>
+                  React · GatsbyJS · styled components
+                </ProjectSubtitle>
+              </ProjectTitleBlock>
               <P>
                 Molestiae quae optio labore occaecati consequuntur. Ut iusto in
                 dolor eligendi. Veniam ab corporis possimus tempore qui
                 molestiae facere doloribus. Non libero dolorem repellat
                 voluptatem expedita.
               </P>
+              <ProjectLink href="https://anagarcialucero.com" />
               <a
                 href="https://anagarcialucero.com"
                 target="_blank"
@@ -179,7 +206,7 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-  </main>
+  </Root>
 );
 
 export default IndexPage;
