@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Personal website",
+    title: "Hugo Cárdenas | Software developer",
+    description: "Software developer",
+    siteUrl: "https://hugocardenas.me",
+    image: "/images/avatar.png",
+    twitterUsername: "@_hugocardenas",
   },
   plugins: [
     "gatsby-plugin-styled-components",
