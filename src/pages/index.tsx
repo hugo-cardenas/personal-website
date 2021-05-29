@@ -48,7 +48,15 @@ const P = tw.p`text-base font-normal leading-relaxed text-gray-600`;
 const Li = tw.li`flex flex-row items-center space-x-2 text-base font-normal leading-relaxed text-gray-600`;
 
 const ProjectLink = styled.a.attrs({
-  children: "See site →",
+  className: "group",
+  children: (
+    <>
+      Go to site{" "}
+      <span tw="group-hover:translate-x-2 transform transition-transform">
+        →
+      </span>
+    </>
+  ),
   target: "_blank",
   rel: "noopener noreferrer",
 })`
@@ -58,6 +66,17 @@ const ProjectLink = styled.a.attrs({
 const ProjectTitleBlock = tw.div`space-y-1`;
 
 const ProjectSubtitle = tw.div`text-sm text-gray-400`;
+
+const ProjectImageOverlay = () => (
+  <div
+    className="group"
+    tw="absolute flex justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-0 hover:bg-opacity-40 transition-colors duration-200"
+  >
+    <div tw="text-transparent font-semibold transform translate-y-2 group-hover:(text-white translate-y-0) transition duration-200">
+      Go to site →
+    </div>
+  </div>
+);
 
 const technologies = [
   "Typescript",
@@ -77,13 +96,13 @@ const IndexPage = () => (
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
-            // placeholder="blurred"
+            placeholder="blurred"
             objectFit="cover"
           />
         </div>
       </div>
       {/* Content */}
-      <div tw="flex-1 w-full max-w-xl space-y-12">
+      <div tw="flex-1 w-full max-w-xl space-y-12 flex flex-col">
         {/* Intro */}
         <TextBlock>
           <H1>Hugo Cárdenas</H1>
@@ -91,8 +110,10 @@ const IndexPage = () => (
             I am a software developer from Spain, based in Helsinki, Finland. I
             work as a consultant in{" "}
             <a
-              tw="font-medium text-blue-600 hover:text-blue-700"
               href="https://newthings.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              tw="font-medium text-blue-600 hover:text-blue-700"
             >
               newthings.co
             </a>
@@ -145,13 +166,15 @@ const IndexPage = () => (
                 rel="noopener noreferrer"
                 tw="block"
               >
-                <div tw="overflow-hidden border border-gray-200 rounded-md">
+                <div tw="overflow-hidden border border-gray-200 rounded-md relative">
                   <StaticImage
                     src="../images/website-historian.png"
-                    alt="Avatar"
+                    alt="Historian"
                     placeholder="blurred"
                     objectFit="cover"
+                    style={{}}
                   />
+                  <ProjectImageOverlay />
                 </div>
               </a>
             </div>
@@ -175,34 +198,38 @@ const IndexPage = () => (
                 rel="noopener noreferrer"
                 tw="block"
               >
-                <div tw="overflow-hidden rounded-md">
+                <div tw="overflow-hidden rounded-md relative">
                   <StaticImage
                     src="../images/website-ana.png"
-                    alt="Avatar"
+                    alt="Ana García Lucero"
                     placeholder="blurred"
                     objectFit="cover"
                   />
+                  <ProjectImageOverlay />
                 </div>
               </a>
             </div>
           </div>
         </div>
         {/* Social */}
-        <div tw="flex flex-row items-center space-x-6">
-          <a
-            href="https://twitter.com/_hugocardenas"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TwitterIcon tw="text-gray-400 transition-colors duration-200 hover:text-blue-600" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/hugocardenas/?locale=en_US"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInIcon tw="text-gray-400 transition-colors duration-200 hover:text-blue-600" />
-          </a>
+        <div tw="flex flex-col  border-red-500 space-y-2">
+          <P>Get in touch!</P>
+          <div tw="flex flex-row items-center space-x-6 ">
+            <a
+              href="https://twitter.com/_hugocardenas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon tw="text-gray-400 transition-colors duration-200 hover:text-blue-600" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hugocardenas/?locale=en_US"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon tw="text-gray-400 transition-colors duration-200 hover:text-blue-600" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
