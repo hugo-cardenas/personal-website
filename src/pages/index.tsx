@@ -60,7 +60,6 @@ const IndexPage = () => (
       <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
         <div tw="w-full h-full overflow-hidden rounded-xl">
           <StaticImage
-            tw="w-full h-full overflow-hidden rounded-xl"
             src="../images/avatar.png"
             alt="Avatar"
             placeholder="blurred"
@@ -119,13 +118,21 @@ const IndexPage = () => (
                 playing games with similar mechanics and lacking an online
                 version of it.
               </P>
-              <StaticImage
-                tw="overflow-hidden border border-gray-200 rounded-md"
-                src="../images/website-historian.png"
-                alt="Avatar"
-                placeholder="blurred"
-                objectFit="cover"
-              />
+              <a
+                href="https://historianthegame.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                tw="block"
+              >
+                <div tw="overflow-hidden border border-gray-200 rounded-md">
+                  <StaticImage
+                    src="../images/website-historian.png"
+                    alt="Avatar"
+                    placeholder="blurred"
+                    objectFit="cover"
+                  />
+                </div>
+              </a>
             </div>
             <div tw="space-y-6">
               <H3>Ana García Lucero</H3>
@@ -135,13 +142,21 @@ const IndexPage = () => (
                 molestiae facere doloribus. Non libero dolorem repellat
                 voluptatem expedita.
               </P>
-              <StaticImage
-                tw="overflow-hidden border-gray-200 rounded-md"
-                src="../images/website-ana.png"
-                alt="Avatar"
-                placeholder="blurred"
-                objectFit="cover"
-              />
+              <a
+                href="https://anagarcialucero.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                tw="block"
+              >
+                <div tw="overflow-hidden rounded-md">
+                  <StaticImage
+                    src="../images/website-ana.png"
+                    alt="Avatar"
+                    placeholder="blurred"
+                    objectFit="cover"
+                  />
+                </div>
+              </a>
             </div>
           </div>
         </div>
