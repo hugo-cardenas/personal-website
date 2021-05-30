@@ -88,10 +88,8 @@ const IndexPage = () => (
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
-            layout="fullWidth"
-            width={100}
-            height={100}
-            // placeholder="blurred"
+            placeholder="blurred"
+            quality={100}
             // objectFit="cover"
           />
         </div>
