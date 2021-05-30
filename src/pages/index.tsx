@@ -84,7 +84,7 @@ const IndexPage = () => (
     <div tw="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       {/* Avatar */}
       <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
-        <div tw="w-full h-full overflow-hidden rounded-xl">
+        <div tw="w-full h-full overflow-hidden rounded-xl relative z-0">
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
@@ -157,7 +157,7 @@ const IndexPage = () => (
                 rel="noopener noreferrer"
                 tw="block"
               >
-                <div tw="overflow-hidden border border-gray-200 rounded-md relative">
+                <div tw="overflow-hidden border border-gray-200 rounded-md relative z-0">
                   <StaticImage
                     src="../images/website-historian.png"
                     alt="Historian"
@@ -187,7 +187,7 @@ const IndexPage = () => (
                 rel="noopener noreferrer"
                 tw="block"
               >
-                <div tw="overflow-hidden rounded-md relative">
+                <div tw="overflow-hidden rounded-md relative z-0">
                   <StaticImage
                     src="../images/website-ana.png"
                     alt="Ana García Lucero"
