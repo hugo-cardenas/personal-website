@@ -83,7 +83,14 @@ const IndexPage = () => (
     <SEO />
     <div tw="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       {/* Avatar */}
-      <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
+      <StaticImage
+        src="../images/avatar.png"
+        alt="Avatar"
+        placeholder="blurred"
+        width={160}
+        // objectFit="cover"
+      />
+      {/* <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
         <div tw="w-full h-full overflow-hidden rounded-xl">
           <StaticImage
             src="../images/avatar.png"
@@ -93,7 +100,7 @@ const IndexPage = () => (
             // objectFit="cover"
           />
         </div>
-      </div>
+      </div> */}
       {/* Content */}
       <div tw="flex-1 w-full max-w-xl space-y-12 flex flex-col">
         {/* Intro */}
