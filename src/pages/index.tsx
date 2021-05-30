@@ -49,14 +49,7 @@ const Li = tw.li`flex flex-row items-center space-x-2 text-base font-normal lead
 
 const ProjectLink = styled.a.attrs({
   className: "group",
-  children: (
-    <>
-      Go to site{" "}
-      <span tw="group-hover:translate-x-2 transform transition-transform">
-        →
-      </span>
-    </>
-  ),
+  children: "Go to site →",
   target: "_blank",
   rel: "noopener noreferrer",
 })`
@@ -79,7 +72,7 @@ const ProjectImageOverlay = () => (
 );
 
 const technologies = [
-  "Typescript",
+  "TypeScript",
   "React",
   "Node.js",
   "CSS-in-JS",
