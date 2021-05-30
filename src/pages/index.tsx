@@ -3,8 +3,8 @@ import tw, { styled } from "twin.macro";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { SEO } from "../components/SEO";
-import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import img from "../images/avatar.png";
 
 type ChildrenProps = {
   children: React.ReactNode;
@@ -94,6 +94,7 @@ const IndexPage = () => (
           />
         </div>
       </div>
+      <img src={img} width="200px" height="200px" />
       {/* Content */}
       <div tw="flex-1 w-full max-w-xl space-y-12 flex flex-col">
         {/* Intro */}
@@ -179,10 +180,8 @@ const IndexPage = () => (
                 </ProjectSubtitle>
               </ProjectTitleBlock>
               <P>
-                Molestiae quae optio labore occaecati consequuntur. Ut iusto in
-                dolor eligendi. Veniam ab corporis possimus tempore qui
-                molestiae facere doloribus. Non libero dolorem repellat
-                voluptatem expedita.
+                Personal website for storyteller and English teacher Ana García
+                Lucero.
               </P>
               <ProjectLink href="https://anagarcialucero.com" />
               <a
@@ -205,7 +204,7 @@ const IndexPage = () => (
           </div>
         </div>
         {/* Social */}
-        <div tw="flex flex-col  border-red-500 space-y-2">
+        <div tw="flex flex-col  space-y-2">
           <P>Get in touch!</P>
           <div tw="flex flex-row items-center space-x-6 ">
             <a
