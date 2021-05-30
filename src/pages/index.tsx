@@ -83,24 +83,15 @@ const IndexPage = () => (
     <SEO />
     <div tw="flex flex-col space-y-8 md:space-y-0 md:space-x-16 md:flex-row md:items-start">
       {/* Avatar */}
-      <StaticImage
-        src="../images/avatar.png"
-        alt="Avatar"
-        placeholder="blurred"
-        width={160}
-        // objectFit="cover"
-      />
-      {/* <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
+      <div tw="block w-40 h-40 bg-gray-500 border-4 border-gray-300 rounded-xl">
         <div tw="w-full h-full overflow-hidden rounded-xl">
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
             placeholder="blurred"
-            quality={100}
-            // objectFit="cover"
           />
         </div>
-      </div> */}
+      </div>
       {/* Content */}
       <div tw="flex-1 w-full max-w-xl space-y-12 flex flex-col">
         {/* Intro */}
@@ -117,8 +108,8 @@ const IndexPage = () => (
             >
               newthings.co
             </a>
-            , where lately I've been helping clients in the health- and food
-            delivery- sectors to build some{" "}
+            , where lately I've been helping clients in the health and food
+            delivery sectors to build some{" "}
             <span tw="italic">interesting products</span>.
           </P>
           <P>
