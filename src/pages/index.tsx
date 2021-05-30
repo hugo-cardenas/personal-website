@@ -4,7 +4,6 @@ import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { SEO } from "../components/SEO";
 import { StaticImage } from "gatsby-plugin-image";
-import img from "../images/avatar.png";
 
 type ChildrenProps = {
   children: React.ReactNode;
@@ -89,12 +88,14 @@ const IndexPage = () => (
           <StaticImage
             src="../images/avatar.png"
             alt="Avatar"
-            placeholder="blurred"
-            objectFit="cover"
+            layout="fullWidth"
+            width={100}
+            height={100}
+            // placeholder="blurred"
+            // objectFit="cover"
           />
         </div>
       </div>
-      <img src={img} width="200px" height="200px" />
       {/* Content */}
       <div tw="flex-1 w-full max-w-xl space-y-12 flex flex-col">
         {/* Intro */}
